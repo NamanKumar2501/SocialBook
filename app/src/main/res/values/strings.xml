@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Social Book</string>
+    <string name="register_for_new_user">Register for new user</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="registration">Registration</string>
+    <string name="_24_7_healtcare">24*7 Healtcare</string>
+    <string name="already_register">Already Register</string>
+</resources>
