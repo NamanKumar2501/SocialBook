@@ -50,6 +50,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String password = edPassword.getText().toString();
                 String email = edEmail.getText().toString();
                 String confirm = edConfirmPassword.getText().toString();
+
+                Database db = new Database(getApplicationContext(), "SocialBook", null, 1);
+
                 if (username.length() == 0 || email.length() == 0 || password.length()==0  || confirm.length() == 0){
                     Toast.makeText(RegisterActivity.this, "Please Fill All Details ", Toast.LENGTH_SHORT).show();
                 }else{
@@ -57,6 +60,9 @@ public class RegisterActivity extends AppCompatActivity {
                         if (password.length()<6){
                             Toast.makeText(RegisterActivity.this, "Password must contain at least 8 characters :", Toast.LENGTH_SHORT).show();
                         }else{
+
+                            db.register(username,email,password);
+
                             Toast.makeText(RegisterActivity.this, "Register Successful :", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                             startActivity(intent);
