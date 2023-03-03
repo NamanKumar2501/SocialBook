@@ -31,6 +31,11 @@ public class LoginActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+
+                /*
+
                 String username = edUserName.getText().toString();
                 String password = edPassword.getText().toString();
 
@@ -54,6 +59,9 @@ public class LoginActivity extends AppCompatActivity {
                        Toast.makeText(LoginActivity.this, "Invalid UserName and Password", Toast.LENGTH_SHORT).show();
                    }
                 }
+
+                */
+
             }
         });
 
