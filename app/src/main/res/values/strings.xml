@@ -8,4 +8,16 @@
     <string name="email">Email</string>
     <string name="registration">Registration</string>
     <string name="already_register">Already Register</string>
+    <string name="contect_number">Contect Number</string>
+    <string name="fees">Fees</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="book_appointment">Book Appointment</string>
+    <string name="social_book">Social Book</string>
+    <string name="register">Register</string>
+    <string name="_10_00">10:00</string>
+    <string name="_02_03_2023">02/03/2023</string>
+    <string name="select_time">Select Time</string>
+    <string name="select_date">Select Date</string>
+    <string name="back">Back</string>
 </resources>
