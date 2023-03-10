@@ -32,9 +32,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 
-
+/*
 
                 String username = edUserName.getText().toString();
                 String password = edPassword.getText().toString();
@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                    }
                 }
 
+ */
 
 
             }

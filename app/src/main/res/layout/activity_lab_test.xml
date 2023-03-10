@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.046" />
 
     <ListView
-        android:id="@+id/listViewLT"
+        android:id="@+id/listViewCard"
         android:layout_width="350dp"
         android:layout_height="500dp"
         android:layout_marginTop="8dp"
@@ -72,27 +72,27 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <Button
-        android:id="@+id/buttonLtBack"
-        android:layout_width="160dp"
+        android:id="@+id/buttonCartCheckout"
+        android:layout_width="126dp"
         android:layout_height="54dp"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewLT"
+        app:layout_constraintTop_toBottomOf="@+id/listViewCard"
         app:layout_constraintVertical_bias="0.709" />
 
     <Button
-        android:id="@+id/buttonLTGoToCart"
-        android:layout_width="160dp"
+        android:id="@+id/buttonCartback"
+        android:layout_width="126dp"
         android:layout_height="54dp"
         android:text="Go To Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewLT"
+        app:layout_constraintTop_toBottomOf="@+id/listViewCard"
         app:layout_constraintVertical_bias="0.709" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

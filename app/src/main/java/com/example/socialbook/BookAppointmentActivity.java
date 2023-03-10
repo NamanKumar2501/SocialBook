@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -29,15 +28,15 @@ public class BookAppointmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_appointment);
 
-        tv1 = findViewById(R.id.edittextAppFullName);
-        tv2 = findViewById(R.id.edittextAppAddress);
-        tv3 = findViewById(R.id.edittextAppContectNumber);
-        tv4 = findViewById(R.id.edittextAppFees);
+        tv1 = findViewById(R.id.edittextLTBFullName);
+        tv2 = findViewById(R.id.edittextLTBAddress);
+        tv3 = findViewById(R.id.edittextLTBPincode);
+        tv4 = findViewById(R.id.edittextLTBContactNumber);
         tv = findViewById(R.id.textViewAppTitle);
         btnBook = findViewById(R.id.buttonBookAppoinment2);
         btnBack = findViewById(R.id.buttonAppBack);
-        dateButton = findViewById(R.id.buttonAppDate);
-        timeButton = findViewById(R.id.buttonAppTimePicker);
+        dateButton = findViewById(R.id.buttonCartDatePicker);
+        timeButton = findViewById(R.id.buttonCartTimePicker);
 
 
 
@@ -72,7 +71,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
         tv4.setText("Cons Fees:"+fees+"/-");
 
 
-        // call datepicker
+        // call DatePicker
         initDatePicker();
         dateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +80,7 @@ public class BookAppointmentActivity extends AppCompatActivity {
             }
         });
 
-        // call timepicker
+        // call TimePicker
         initTimePicker();
         timeButton.setOnClickListener(new View.OnClickListener() {
             @Override

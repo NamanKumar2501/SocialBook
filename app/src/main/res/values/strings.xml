@@ -21,4 +21,5 @@
     <string name="select_date">Select Date</string>
     <string name="back">Back</string>
     <string name="select_deliver_time">Select Deliver Time</string>
+    <string name="book">Book</string>
 </resources>

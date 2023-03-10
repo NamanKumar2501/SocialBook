@@ -89,7 +89,7 @@
         android:id="@+id/buttonLDAddToCart"
         android:layout_width="160dp"
         android:layout_height="54dp"
-        android:text="Go To Cart"
+        android:text="Add To Cart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
