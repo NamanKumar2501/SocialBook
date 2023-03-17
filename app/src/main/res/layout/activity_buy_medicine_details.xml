@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back1"
-    tools:context=".LabTestDetailsActivity">
+    tools:context=".BuyMedicineDetailsActivity">
 
     <TextView
         android:id="@+id/textViewODName"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Lab Test and Package"
+        android:text="Buy Medicine"
         android:textColor="@color/yellowLight"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -75,7 +75,7 @@
         app:layout_constraintVertical_bias="0.134" />
 
     <Button
-        android:id="@+id/buttonLDBack"
+        android:id="@+id/buttonBuyMedicineBack"
         android:layout_width="160dp"
         android:layout_height="54dp"
         android:layout_marginBottom="16dp"
@@ -86,7 +86,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonLDAddToCart"
+        android:id="@+id/buttonBMAddToCart"
         android:layout_width="160dp"
         android:layout_height="54dp"
         android:text="Add To Cart"
@@ -95,16 +95,16 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLineBM"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintVertical_bias="0.453" />
 
     <TextView
-        android:id="@+id/textViewLDTotalCost"
+        android:id="@+id/textViewBMDTotalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Cost"
         android:textColor="@color/yellowLight"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLDAddToCart"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBMAddToCart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"

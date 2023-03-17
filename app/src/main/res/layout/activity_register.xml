@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.077" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewBMBPackageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/registration"
@@ -38,7 +38,7 @@
         app:layout_constraintVertical_bias="0.042" />
 
     <EditText
-        android:id="@+id/edittextLTBAddress"
+        android:id="@+id/edittextBMBAddress"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -57,11 +57,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBFullName"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBFullName"
         app:layout_constraintVertical_bias="0.045" />
 
     <EditText
-        android:id="@+id/edittextLTBFullName"
+        android:id="@+id/edittextBMBFullName"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -80,11 +80,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName"
         app:layout_constraintVertical_bias="0.124" />
 
     <EditText
-        android:id="@+id/edittextLTBContactNumber"
+        android:id="@+id/edittextBMBContactNumber"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -103,11 +103,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBPincode"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBPincode"
         app:layout_constraintVertical_bias="0.065" />
 
     <EditText
-        android:id="@+id/edittextLTBPincode"
+        android:id="@+id/edittextBMBPincode"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -126,7 +126,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBAddress"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBAddress"
         app:layout_constraintVertical_bias="0.061" />
 
     <Button
@@ -139,7 +139,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.389"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.223" />
 
     <TextView

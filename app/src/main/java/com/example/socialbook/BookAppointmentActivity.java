@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -28,14 +31,14 @@ public class BookAppointmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_appointment);
 
-        tv1 = findViewById(R.id.edittextLTBFullName);
-        tv2 = findViewById(R.id.edittextLTBAddress);
-        tv3 = findViewById(R.id.edittextLTBPincode);
-        tv4 = findViewById(R.id.edittextLTBContactNumber);
+        tv1 = findViewById(R.id.edittextBMBFullName);
+        tv2 = findViewById(R.id.edittextBMBAddress);
+        tv3 = findViewById(R.id.edittextBMBPincode);
+        tv4 = findViewById(R.id.edittextBMBContactNumber);
         tv = findViewById(R.id.textViewAppTitle);
         btnBook = findViewById(R.id.buttonBookAppoinment2);
         btnBack = findViewById(R.id.buttonAppBack);
-        dateButton = findViewById(R.id.buttonCartDatePicker);
+        dateButton = findViewById(R.id.buttonBMCartDate);
         timeButton = findViewById(R.id.buttonCartTimePicker);
 
 
@@ -61,13 +64,13 @@ public class BookAppointmentActivity extends AppCompatActivity {
         String title = it.getStringExtra("text1");
         String fullname = it.getStringExtra("text2");
         String address = it.getStringExtra("text3");
-        String context = it.getStringExtra("text4");
+        String contact = it.getStringExtra("text4");
         String fees = it.getStringExtra("text5");
 
         tv.setText(title);
         tv1.setText(fullname);
         tv2.setText(address);
-        tv3.setText(context);
+        tv3.setText(contact);
         tv4.setText("Cons Fees:"+fees+"/-");
 
 
@@ -94,8 +97,20 @@ public class BookAppointmentActivity extends AppCompatActivity {
         btnBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Database db  = new Database(getApplicationContext(),"socialbook",null,1);
+                SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
+                String username = sharedPreferences.getString("username", "").toString();
+
+                if (db.checkAppointmentExists(username,title+" => "+fullname,address,contact,dateButton.getText().toString(),timeButton.getText().toString())==1){
+                    Toast.makeText(BookAppointmentActivity.this, "Appointment already booked", Toast.LENGTH_SHORT).show();
+                }else {
+                    db.addOrder(username,title+" => "+fullname,address,contact,0,dateButton.getText().toString(),timeButton.getText().toString(),Float.parseFloat(fees),"appointment");
+                    Toast.makeText(BookAppointmentActivity.this, "Your Appointment is done successfully", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(BookAppointmentActivity.this,HomeActivity.class));
+                }
 
             }
+            
         });
 
         // --------------------------------------------

@@ -15,13 +15,12 @@ import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.TimePicker;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class CartLabActivity extends AppCompatActivity {
+public class CartBuyMedicineActivity extends AppCompatActivity {
 
     HashMap<String,String> item;
     ArrayList list;
@@ -33,17 +32,18 @@ public class CartLabActivity extends AppCompatActivity {
     private TimePickerDialog timePickerDialog;
     private Button dateButton,timeButton, btnCheckout, btnBack;
     private String[][] packages = {};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart_lab);
+        setContentView(R.layout.activity_cart_buy_medicine);
 
         dateButton = findViewById(R.id.buttonBMCartDate);
-        timeButton = findViewById(R.id.buttonCartTimePicker);
-        btnBack = findViewById(R.id.buttonBMCheckout);
-        btnCheckout = findViewById(R.id.buttonBMCartback);
+        btnBack = findViewById(R.id.buttonBMCartback);
+        btnCheckout = findViewById(R.id.buttonBMCheckout);
         tvTotal = findViewById(R.id.textViewBMCartTotalCost);
         lst = findViewById(R.id.listViewBMCart);
+
 
         SharedPreferences sharedPreferences = getSharedPreferences("shared_prefs", Context.MODE_PRIVATE);
         String username = sharedPreferences.getString("username","").toString();
@@ -51,8 +51,8 @@ public class CartLabActivity extends AppCompatActivity {
         Database db = new Database(getApplicationContext(),"socialbook",null,1);
 
         float totalAmount = 0;
-        ArrayList dbData= db.getCartData(username, "lab");
-       //  Toast.makeText(this, ""+dbData,Toast.LENGTH_SHORT).show();
+        ArrayList dbData= db.getCartData(username, "medicine");
+        //  Toast.makeText(this, ""+dbData,Toast.LENGTH_SHORT).show();
 
         packages = new String[dbData.size()][];
         for (int i=0; i<packages.length; i++){
@@ -89,7 +89,7 @@ public class CartLabActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CartLabActivity.this, LabTestActivity.class);
+                Intent i = new Intent(CartBuyMedicineActivity.this, BuyMedicineActivity.class);
                 startActivity(i);
             }
         });
@@ -98,10 +98,9 @@ public class CartLabActivity extends AppCompatActivity {
         btnCheckout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(CartLabActivity.this, LabTestBookActivity.class);
+                Intent it = new Intent(CartBuyMedicineActivity.this, BuyMedicineBookActivity.class);
                 it.putExtra("price",tvTotal.getText());
                 it.putExtra("date",dateButton.getText());
-                it.putExtra("time",timeButton.getText());
                 startActivity(it);
             }
         });
@@ -115,18 +114,8 @@ public class CartLabActivity extends AppCompatActivity {
             }
         });
 
-        //TimePicker
-        initTimePicker();
-        timeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                timePickerDialog.show();
-            }
-        });
-
     }
 
-    // Date Picker
     private  void  initDatePicker(){
         DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -146,24 +135,4 @@ public class CartLabActivity extends AppCompatActivity {
         datePickerDialog.getDatePicker().setMinDate(cal.getTimeInMillis()+86400000);
 
     }
-
-    // Time Picker
-
-    private  void  initTimePicker(){
-        TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                timeButton.setText(hourOfDay+":"+minute);
-            }
-        };
-
-        Calendar cal = Calendar.getInstance();
-        int hrs = cal.get(Calendar.HOUR);
-        int mins = cal.get(Calendar.MINUTE);
-
-        int style = AlertDialog.THEME_HOLO_DARK;
-        timePickerDialog = new TimePickerDialog(this,style,timeSetListener,hrs,mins,true);
-
-    }
-
 }

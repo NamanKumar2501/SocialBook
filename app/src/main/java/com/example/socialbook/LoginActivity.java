@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
 
-/*
+
 
                 String username = edUserName.getText().toString();
                 String password = edPassword.getText().toString();
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                    }
                 }
 
- */
+
 
 
             }

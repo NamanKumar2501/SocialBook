@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back2"
-    tools:context=".LabTestActivity">
+    android:background="@drawable/back1"
+    tools:context=".HealthArticalsActivity">
 
     <TextView
         android:id="@+id/textViewODName"
@@ -23,76 +23,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
 
-
     <TextView
-        android:id="@+id/textViewODTitle"
+        android:id="@+id/textViewHATitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Deliver Location : Pune"
+        android:text="HEALTH ARTICALS"
         android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewODName"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textViewBMDPackageName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Deliver Location : Pune"
-        android:textColor="@color/yellowLight"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewODName"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.02" />
+
 
     <ListView
-        android:id="@+id/listViewCard"
+        android:id="@+id/listViewHA"
         android:layout_width="350dp"
         android:layout_height="500dp"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBMDPackageName"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewHATitle"
+        app:layout_constraintVertical_bias="0.202" />
 
     <Button
-        android:id="@+id/buttonBMCartback"
-        android:layout_width="126dp"
+        android:id="@+id/buttonHABack"
+        android:layout_width="162dp"
         android:layout_height="54dp"
-        android:text="Back"
+        android:text="@string/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewCard"
-        app:layout_constraintVertical_bias="0.709" />
-
-    <Button
-        android:id="@+id/buttonBMCheckout"
-        android:layout_width="126dp"
-        android:layout_height="54dp"
-        android:text="Go To Cart"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewCard"
-        app:layout_constraintVertical_bias="0.709" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewHA"
+        app:layout_constraintVertical_bias="0.424" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

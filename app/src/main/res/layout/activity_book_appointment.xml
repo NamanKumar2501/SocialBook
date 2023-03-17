@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.362"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.668" />
 
     <TextView
@@ -53,7 +53,7 @@
         app:layout_constraintVertical_bias="0.032" />
 
     <TextView
-        android:id="@+id/edittextLTBAddress"
+        android:id="@+id/edittextBMBAddress"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -72,11 +72,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBFullName"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBFullName"
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/edittextLTBFullName"
+        android:id="@+id/edittextBMBFullName"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -99,7 +99,7 @@
         app:layout_constraintVertical_bias="0.075" />
 
     <TextView
-        android:id="@+id/edittextLTBContactNumber"
+        android:id="@+id/edittextBMBContactNumber"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:background="@drawable/input_bg"
@@ -118,11 +118,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBPincode"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBPincode"
         app:layout_constraintVertical_bias="0.065" />
 
     <TextView
-        android:id="@+id/edittextLTBPincode"
+        android:id="@+id/edittextBMBPincode"
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
@@ -141,7 +141,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBAddress"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBAddress"
         app:layout_constraintVertical_bias="0.061" />
 
     <Button
@@ -165,11 +165,11 @@
         android:inputType="date"
         android:text="@string/select_date"
         android:textColor="@color/yellowLight"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCartDatePicker"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBMCartDate"
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.213"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.632" />
 
     <TextView
@@ -184,11 +184,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.584" />
 
     <Button
-        android:id="@+id/buttonCartDatePicker"
+        android:id="@+id/buttonBMCartDate"
         style="?android:spinnerStyle"
         android:layout_width="125dp"
         android:layout_height="50dp"
@@ -198,7 +198,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView4"
         app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBContactNumber"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.617" />
 
     <Button
@@ -211,8 +211,8 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonBookAppoinment2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.729"
-        app:layout_constraintStart_toEndOf="@+id/buttonCartDatePicker"
-        app:layout_constraintTop_toBottomOf="@+id/edittextLTBContactNumber"
+        app:layout_constraintStart_toEndOf="@+id/buttonBMCartDate"
+        app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.596" />
 
 

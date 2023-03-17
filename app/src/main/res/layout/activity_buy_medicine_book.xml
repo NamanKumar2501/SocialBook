@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".LabTestBookActivity">
+    tools:context=".BuyMedicineBookActivity">
 
 
     <TextView
@@ -146,6 +146,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edittextBMBContactNumber"
         app:layout_constraintVertical_bias="0.568" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

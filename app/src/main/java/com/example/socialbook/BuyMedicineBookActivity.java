@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class LabTestBookActivity extends AppCompatActivity {
+public class BuyMedicineBookActivity extends AppCompatActivity {
 
     EditText etname,etaddress,etcontact,etpincode;
     Button btnBooking;
@@ -19,7 +19,7 @@ public class LabTestBookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lab_test_book);
+        setContentView(R.layout.activity_buy_medicine_book);
 
         etname = findViewById(R.id.edittextBMBFullName);
         etaddress = findViewById(R.id.edittextBMBAddress);
@@ -30,7 +30,7 @@ public class LabTestBookActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String[] price = intent.getStringExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
         String data = intent.getStringExtra("date");
-        String time = intent.getStringExtra("time");
+        // String time = intent.getStringExtra("time");
 
         btnBooking.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +39,12 @@ public class LabTestBookActivity extends AppCompatActivity {
                 String username = sharedPreferences.getString("username", "").toString();
 
                 Database db = new Database(getApplicationContext(),"socialbook",null,1);
-                db.addOrder(username,etname.getText().toString(),etaddress.getText().toString(),etcontact.getText().toString(),Integer.parseInt(etpincode.getText().toString()),data.toString(),time.toString(),Float.parseFloat(price[1].toString()),"lab");
-                db.removeCart(username,"lab");
-                Toast.makeText(LabTestBookActivity.this, "Your Booking is done Successfully", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LabTestBookActivity.this,HomeActivity.class));
+                db.addOrder(username,etname.getText().toString(),etaddress.getText().toString(),etcontact.getText().toString(),Integer.parseInt(etpincode.getText().toString()),data.toString(),"",Float.parseFloat(price[1].toString()),"medicine");
+                db.removeCart(username,"medicine");
+                Toast.makeText(BuyMedicineBookActivity.this, "Your Booking is done Successfully", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(BuyMedicineBookActivity.this,HomeActivity.class));
             }
         });
-
 
     }
 }
