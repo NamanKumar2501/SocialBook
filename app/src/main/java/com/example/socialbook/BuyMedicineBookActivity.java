@@ -39,7 +39,12 @@ public class BuyMedicineBookActivity extends AppCompatActivity {
                 String username = sharedPreferences.getString("username", "").toString();
 
                 Database db = new Database(getApplicationContext(),"socialbook",null,1);
-                db.addOrder(username,etname.getText().toString(),etaddress.getText().toString(),etcontact.getText().toString(),Integer.parseInt(etpincode.getText().toString()),data.toString(),"",Float.parseFloat(price[1].toString()),"medicine");
+                db.addOrder(username,etname.getText().toString(),
+                        etaddress.getText().toString(),
+                        etcontact.getText().toString(),
+                        Integer.parseInt(etpincode.getText().toString()),
+                        data.toString(),"",Float.parseFloat(price[1].toString()),"medicine");
+
                 db.removeCart(username,"medicine");
                 Toast.makeText(BuyMedicineBookActivity.this, "Your Booking is done Successfully", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(BuyMedicineBookActivity.this,HomeActivity.class));

@@ -24,7 +24,7 @@ public class LabTestActivity extends AppCompatActivity {
                     {"Package 5 : Immunity Check", "", "", "", "199"}
             };
 
-    private String[] package_details = {
+    private String[] package_detail = {
             "Blood Glucose Fasting\n" +
                     " Complete Hemogram\n" +
                     "HbA1c\n" +
@@ -91,7 +91,7 @@ public class LabTestActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent it = new Intent(LabTestActivity.this, LabTestDetailsActivity.class);
                 it.putExtra("text1",packages[position][0]);
-                it.putExtra("text2",package_details[position]);
+                it.putExtra("text2",package_detail[position]);
                 it.putExtra("text3",packages[position][4]);
                 startActivity(it);
             }

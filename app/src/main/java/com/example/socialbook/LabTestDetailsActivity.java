@@ -30,13 +30,15 @@ public class LabTestDetailsActivity extends AppCompatActivity {
 
         edDetails.setKeyListener(null);
 
+        btnBack = findViewById(R.id.buttonLDBack);
+        btnAddToCart = findViewById(R.id.buttonLDAddToCart);
+
         Intent intent = getIntent();
         tvPackageName.setText(intent.getStringExtra("text1"));
         edDetails.setText(intent.getStringExtra("text2"));
         tvTotalCost.setText("Total Cost : "+intent.getStringExtra("text3")+"/-");
 
-        btnBack = findViewById(R.id.buttonLDBack);
-        btnAddToCart = findViewById(R.id.buttonLDAddToCart);
+
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

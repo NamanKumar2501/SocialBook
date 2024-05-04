@@ -39,7 +39,11 @@ public class LabTestBookActivity extends AppCompatActivity {
                 String username = sharedPreferences.getString("username", "").toString();
 
                 Database db = new Database(getApplicationContext(),"socialbook",null,1);
-                db.addOrder(username,etname.getText().toString(),etaddress.getText().toString(),etcontact.getText().toString(),Integer.parseInt(etpincode.getText().toString()),data.toString(),time.toString(),Float.parseFloat(price[1].toString()),"lab");
+                db.addOrder(username,etname.getText().toString(),
+                        etaddress.getText().toString(),
+                        etcontact.getText().toString(),
+                        Integer.parseInt(etpincode.getText().toString()),
+                        data.toString(),time.toString(),Float.parseFloat(price[1].toString()),"lab");
                 db.removeCart(username,"lab");
                 Toast.makeText(LabTestBookActivity.this, "Your Booking is done Successfully", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(LabTestBookActivity.this,HomeActivity.class));
